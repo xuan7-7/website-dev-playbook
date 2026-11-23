@@ -1,8 +1,3 @@
----
-name: website-responsive-navigation
-description: 响应式与导航交互：断点、移动端单行头部、分类溢出「⋯」、二级导航点空白/Esc 收起、移动列表精简。用户说"手机换行/太挤/横向滚动/菜单收不起来/点旁边不关"时用；桌面微调不要用。
----
-
 # 响应式与导航流
 
 1. 断点：≤640 手机、641–1024 平板、≥1025 桌面；移动优先。
@@ -12,4 +7,4 @@ description: 响应式与导航交互：断点、移动端单行头部、分类�
 5. 二级导航点空白/Esc 收起；document 委托 + closest，同步 aria-expanded。
 6. 移动端列表只留序号+标题+字数；≥sm 再显示摘要/标签。
 
-算法与边界见 `references/overflow-dots.md`。边界：遵守总纲 §8。
+算法与边界见 `flows/responsive-navigation/references/overflow-dots.md`。边界：遵守总纲 §8。

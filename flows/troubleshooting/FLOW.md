@@ -1,12 +1,7 @@
----
-name: website-troubleshooting
-description: 静态站故障速查：404/横向滚动/动态类不生效/暗色选中态/空黑块/移动端换行/不收起/缺字/图片裁切。用户描述已知症状时用；新需求不要用。
----
-
 # 故障速查流
 
 1. 一句话描述：页面/宽度/主题/操作。
-2. 按 `references/symptom-table.md` 定位根因，只改对应点。
+2. 按 `flows/troubleshooting/references/symptom-table.md` 定位根因，只改对应点。
 3. 单点修复，立即验证该现象是否消失。
 4. 回归相邻功能（导航、暗色、移动端）。
 5. 未命中先停，收集证据（截图/控制台/DOM/构建日志）再分析，不连环试错。

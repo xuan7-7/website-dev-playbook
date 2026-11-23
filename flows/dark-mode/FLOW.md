@@ -1,8 +1,3 @@
----
-name: website-dark-mode
-description: 暗色模式与暗色可读性：主题开关、token、覆盖顺序、选中态、对比度。用户说"做暗色/深色/夜间模式""暗色看不清/字太浅/选中不明显/闪白/黑块"时用；只调主色不要用。
----
-
 # 暗色模式流
 
 1. `<html data-theme>` + 首屏内联脚本读 localStorage，避免闪烁。
@@ -12,4 +7,4 @@ description: 暗色模式与暗色可读性：主题开关、token、覆盖顺�
 5. 半透明白卡改深色实底；状态色提亮；图片背景文字单独查。
 6. 逐页亮/暗截图 + 对比度扫描（正文≥4.5:1、辅助≥3:1），三态可见。
 
-详见 `references/dark-checklist.md`。边界：遵守总纲 §8。
+详见 `flows/dark-mode/references/dark-checklist.md`。边界：遵守总纲 §8。

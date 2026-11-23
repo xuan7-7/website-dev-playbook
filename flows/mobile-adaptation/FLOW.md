@@ -1,8 +1,3 @@
----
-name: website-mobile-adaptation
-description: 移动端适配与优化：断点、单行头部、溢出与触控、安全区、布局不合理时主动改进、320/390/768 验证。用户说"手机排版乱/太挤/横向滚动/按钮难点/不像手机站"时用；只改桌面布局不要用。
----
-
 # 移动端适配流
 
 1. 先测 390px（必要时 320/768），记录横向滚动、溢出、点击目标、文字截断。
@@ -12,4 +7,4 @@ description: 移动端适配与优化：断点、单行头部、溢出与触控�
 5. 移动列表只留核心信息（序号 + 标题 + 字数）；抽屉打开锁 body 滚动，Esc/点空白收起。
 6. 验证：390/320/768 截图 + console 无报错；无横向滚动、无遮挡。
 
-清单见 `references/mobile-checklist.md`。边界：遵守总纲 §8。
+清单见 `flows/mobile-adaptation/references/mobile-checklist.md`。边界：遵守总纲 §8。
