@@ -55,13 +55,13 @@
 ### 阶段 E：页面实现（按页推进）
 顺序：首页 → 列表 → 详情 → 关于 → 统计/归档/标签 → 404
 每页完成：内容真实、亮暗正常、390px 不横向滚动、无开发日志文字
-移动端适配与布局改进按 `skills/mobile-adaptation/SKILL.md` 单独执行
+移动端适配与布局改进按 `flows/mobile-adaptation/FLOW.md` 单独执行
 - **退出**：全部页面本地可达，console 无报错
 
 ### 阶段 F：优化
-按 `skills/performance/SKILL.md` 的预算表测量并记录 before/after；未达标不部署
+按 `flows/performance/FLOW.md` 的预算表测量并记录 before/after；未达标不部署
 - **退出**：预算达标；Lighthouse 移动端 ≥85
 
 ### 阶段 G：验证与部署
-按 `skills/qa-launch/SKILL.md` 执行；本地预览 → 用户说"推" → 部署 → 线上验证
+按 `flows/qa-launch/FLOW.md` 执行；本地预览 → 用户说"推" → 部署 → 线上验证
 - **退出**：关键页 200 且元素存在；用户确认

@@ -31,36 +31,37 @@ Copy-Item -Recurse .\website-dev-playbook "$env:USERPROFILE\.dsh\skills\website-
 - "上线前帮我检查一遍"
 - "部署后样式丢了 / 部署到 GitHub Pages"
 
-## 结构
+## 结构（单技能 + 内部流程）
 
 ```
 website-dev-playbook/
-├── SKILL.md                     总纲：原则、阶段、路由
-├── skills/                      8 个专题子技能
-│   ├── dark-mode/               暗色模式
-│   ├── responsive-navigation/   响应式与导航
-│   ├── media-assets/            图片与素材
-│   ├── performance/             性能预算
-│   ├── qa-launch/               验证上线
-│   ├── deployment/              部署
-│   ├── troubleshooting/         故障速查
-│   └── decision-options/        决策选择题
-├── references/                  按需读取的长文（骨架、内容模型、计数器、评测、案例）
-├── scripts/                     可选脚本（预算、孤儿资产审计）
+├── SKILL.md                     总纲：原则、阶段、路由（唯一技能入口）
+├── flows/                       9 条内部流程（资源文件，不单独收录）
+│   ├── dark-mode/FLOW.md
+│   ├── responsive-navigation/FLOW.md
+│   ├── mobile-adaptation/FLOW.md
+│   ├── media-assets/FLOW.md
+│   ├── performance/FLOW.md
+│   ├── qa-launch/FLOW.md
+│   ├── deployment/FLOW.md
+│   ├── troubleshooting/FLOW.md
+│   └── decision-options/FLOW.md
+├── references/                  按需读取的长文（骨架、内容模型、计数、评测、案例）
+├── scripts/                     可选脚本
 └── CHANGELOG.md
 ```
 
-每个子技能自带 `references/`、`assets/` 或 `scripts/`，详细内容按需读取，主文件保持精简。
+技能入口只有根目录 `SKILL.md` 一个；`flows/` 下是内部流程文件（`FLOW.md`，不是 `SKILL.md`），不参与技能发现。
 
 ## 可选脚本
 
 | 脚本 | 用途 | 依赖 |
 |---|---|---|
-| `skills/media-assets/scripts/compress-images.py` | 批量转 WebP + 压体积 | Pillow |
-| `skills/media-assets/scripts/fade-edges.py` | 边缘淡化/模糊 + 透明 WebP | Pillow + numpy |
-| `skills/media-assets/scripts/font-subset.py` | 按用字生成 woff2 子集 | fonttools |
-| `skills/performance/scripts/page-weight.py` | 构建产物体积统计 | 无 |
-| `skills/qa-launch/scripts/check-links.py` | 站内链接 404 扫描 | 无 |
+| `flows/media-assets/scripts/compress-images.py` | 批量转 WebP + 压体积 | Pillow |
+| `flows/media-assets/scripts/fade-edges.py` | 边缘淡化/模糊 + 透明 WebP | Pillow + numpy |
+| `flows/media-assets/scripts/font-subset.py` | 按用字生成 woff2 子集 | fonttools |
+| `flows/performance/scripts/page-weight.py` | 构建产物体积统计 | 无 |
+| `flows/qa-launch/scripts/check-links.py` | 站内链接 404 扫描 | 无 |
 | `scripts/check-skill-budget.py` | SKILL.md 行数/token 预算检查 | 无 |
 | `scripts/check-orphan-assets.py` | 未被引用的静态资源审计 | 无 |
 

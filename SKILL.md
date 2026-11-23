@@ -1,6 +1,6 @@
 ---
 name: website-dev-playbook
-description: 开发上线静态内容站（个人博客/作品集/落地页）的总流程与规则：核心原则、阶段流程、工程骨架、技能路由。当用户说"做一个网站/博客/落地页""改造现有站点""加暗色模式""优化加载速度""部署上线""检查上线前问题"时使用；纯后端/登录支付/SPA 应用不适用。注意：本技能不包含网站美化（配色审美、排版美化、插画/动效、整体视觉设计），美化需求需另加美化类 Skills 或由用户明确说明。
+description: 开发上线静态内容站（个人博客/作品集/落地页）的总流程与规则：核心原则、阶段流程、工程骨架、技能路由。当用户说"做一个网站/博客/落地页""改造现有站点""加暗色模式""优化加载速度""部署上线""检查上线前问题"时使用；纯后端/登录支付/SPA 应用不适用。美化方面：有美化类 Skills 时交给它；没有时默认使用本技能自带的美化流程（按用户原词检索视觉参考并落地）。
 license: MIT（见 LICENSE）
 ---
 
@@ -34,7 +34,7 @@ license: MIT（见 LICENSE）
 11. **可复现**：构建命令、部署方式写进 README；锁文件提交；不依赖本机全局状态。
 12. **出错先停**：报错先完整读错误、确认补丁是否落地，再决定下一步；禁止连续重试同一操作。
 13. **少即是多**：一次只动用户点名的那一项；不顺手重构、不加"可能有用"的功能；不额外添加用户没有说明的功能和文字。
-14. **决策一律做成选择题**：需要用户拍板时给 A/B/C 具体选项 + 固定「其他」自由补充项，写清影响与推荐理由；用户没选不推进（见 `skills/decision-options/SKILL.md`）。
+14. **决策一律做成选择题**：需要用户拍板时给 A/B/C 具体选项 + 固定「其他」自由补充项，写清影响与推荐理由；用户没选不推进（见 `flows/decision-options/FLOW.md`）。
 
 ## 2. 阶段流程（每阶段有退出条件）
 
@@ -48,15 +48,15 @@ license: MIT（见 LICENSE）
 
 | 子技能 | 文件 | 解决什么 | 触发时机 |
 |---|---|---|---|
-| 暗色模式 | `skills/dark-mode/SKILL.md` | 主题开关、token、覆盖、对比度 | 做暗色 / 暗色看不清 / 选中态不可见 |
-| 响应式与导航 | `skills/responsive-navigation/SKILL.md` | 断点、单行头部、溢出「⋯」、收起 | 手机换行/溢出、导航收不起来 |
-| 移动端适配 | `skills/mobile-adaptation/SKILL.md` | 移动布局不合理改进、触控/安全区、移动验证 | 手机排版乱/挤/横向滚动 |
-| 图片与素材 | `skills/media-assets/SKILL.md` | 压缩、响应式加载、构图、字号子集 | 图片过大/模糊/裁切、字体缺字 |
-| 性能预算 | `skills/performance/SKILL.md` | 预算、测量、优化排序、复测 | 加载慢、页面重、上线前优化 |
-| 验证上线 | `skills/qa-launch/SKILL.md` | 逐项清单 + 交付物 | 部署前自检、验收 |
-| 部署 | `skills/deployment/SKILL.md` | GitHub Pages 配置、workflow、推送协议 | 首次部署、部署失败、404 |
-| 故障速查 | `skills/troubleshooting/SKILL.md` | 现象→根因→修法 | 遇到已知症状先查表 |
-| 决策选择题 | `skills/decision-options/SKILL.md` | A/B/C + 其他 的确认流 | 任何需要用户拍板时 |
+| 暗色模式 | `flows/dark-mode/FLOW.md` | 主题开关、token、覆盖、对比度 | 做暗色 / 暗色看不清 / 选中态不可见 |
+| 响应式与导航 | `flows/responsive-navigation/FLOW.md` | 断点、单行头部、溢出「⋯」、收起 | 手机换行/溢出、导航收不起来 |
+| 移动端适配 | `flows/mobile-adaptation/FLOW.md` | 移动布局不合理改进、触控/安全区、移动验证 | 手机排版乱/挤/横向滚动 |
+| 图片与素材 | `flows/media-assets/FLOW.md` | 压缩、响应式加载、构图、字号子集 | 图片过大/模糊/裁切、字体缺字 |
+| 性能预算 | `flows/performance/FLOW.md` | 预算、测量、优化排序、复测 | 加载慢、页面重、上线前优化 |
+| 验证上线 | `flows/qa-launch/FLOW.md` | 逐项清单 + 交付物 | 部署前自检、验收 |
+| 部署 | `flows/deployment/FLOW.md` | GitHub Pages 配置、workflow、推送协议 | 首次部署、部署失败、404 |
+| 故障速查 | `flows/troubleshooting/FLOW.md` | 现象→根因→修法 | 遇到已知症状先查表 |
+| 决策选择题 | `flows/decision-options/FLOW.md` | A/B/C + 其他 的确认流 | 任何需要用户拍板时 |
 
 ## 5. 案例层（本项目历史坑，按需读取）
 
@@ -86,7 +86,7 @@ license: MIT（见 LICENSE）
 
 ## 9. 维护与版本
 
-- 版本：1.8.1；最后验证：2026-11-23；适配：静态内容站 + GitHub Pages（其他静态托管步骤类似，参数不同）
+- 版本：1.9.0；最后验证：2026-11-23；适配：静态内容站 + GitHub Pages（其他静态托管步骤类似，参数不同）
 - 外部依赖：无（技能本身）；可选脚本依赖 Pillow / numpy / fonttools，缺失先问用户（见 `references/maintenance.md`）
 - 触发复核的情形：框架或托管平台大版本升级、用户反馈「技能没触发」或「步骤没被执行」、技能间描述重叠
 - 变更记录：见根目录 `CHANGELOG.md`；描述或结构调整后跑 `references/evals.md` 回归
